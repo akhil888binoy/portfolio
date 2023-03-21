@@ -12,6 +12,8 @@ export default class AddContact extends Component {
       alert("All fields are needed.");
       return;
     }
+    this.props.addContactHandler(this.state);
+    this.setState({ name: "", email: "" });
     console.log(this.state);
   };
 
